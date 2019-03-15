@@ -10,11 +10,12 @@ $app = new \Slim\App([
 
 
 
-$app->get('/my-path', function ($request, $response, $args) {
+$app->get('/cars', function ($request, $response, $args) {
 
-    $payload = ['cat', 'dog'];
+    $cars = array("Volvo", "BMW", "Toyota");
 
-    return $response->withStatus(201)->withJson($payload);
+
+    return $response->withStatus(201)->withJson($cars);
 
 });
 
